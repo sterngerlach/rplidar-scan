@@ -8,10 +8,10 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+
 #include <signal.h>
 
 #include "rplidar.h"
-#include "rplidar_driver.h"
 
 using namespace rp::standalone::rplidar;
 
@@ -252,7 +252,7 @@ Cleanup:
     /* RPlidarとの接続を終了 */
     pDriver->disconnect();
 
-    /* RPlidarドライバを履き */
+    /* RPlidarドライバを破棄 */
     RPlidarDriver::DisposeDriver(pDriver);
     pDriver = nullptr;
 
